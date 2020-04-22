@@ -28,7 +28,7 @@ export default {
       this.bookings.splice(index, 1);
     })
   },
-  mehtods: {
+  methods: {
     fetchData(){
       BookingService.getBookings()
       .then(bookings => this.bookings = bookings);
