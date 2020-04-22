@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <guest-form />
-    <guest-gird />
+    <bookings-form />
+    <bookings-gird />
   </div>
 </template>
 
 <script>
-import GuestForm from './components/GuestForm.vue';
-import GuestGrid from './components/GuestGrid.vue';
+import BookingsForm from './components/BookingsForm.vue';
+import BookingsGrid from './components/BookingsGrid.vue';
 
 
 export default {
   name: 'App',
   components: {
-    'guest-form': GuestForm,
-    'guest-grid': GuestGrid
+    'bookings-form': BookingsForm,
+    'bookings-grid': BookingsGrid
   }
 }
 </script>
