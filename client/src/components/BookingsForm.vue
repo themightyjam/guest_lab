@@ -10,9 +10,20 @@
       <input type="number" id="room" v-model="room"/>
     </div>
     <div class="formWrap">
+      <label for="email">Email:</label>
+      <input type="text" id="email" v-model="email">
+    </div>
+    <div class="formWrap">
 			<label for="date">Date:</label>
 			<input type="date" id="date" v-model="date" />
 		</div>
+    <div class="formWrap">
+      <label> Checked-in? </label>
+      <select class="checked_in" v-model="checked_in">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
 
     	<input type="submit" value="Save" id="save"/>
     </form>
@@ -28,7 +39,9 @@ export default {
   return {
     name: "",
     room: null,
-    date: null
+    email: "",
+    date: null,
+    checked_in: "yes"
   }
 },
 methods: {
@@ -37,7 +50,9 @@ methods: {
     const payload = {
       name: this.name,
       room: this.room,
-      date: this.date
+      email: this.email,
+      date: this.date,
+      checked_in: this.checked_in
     };
 
     BookingService.postBooking(payload)

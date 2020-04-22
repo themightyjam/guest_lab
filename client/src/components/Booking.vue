@@ -2,6 +2,8 @@
   <div class="booking">
     <h2>{{ booking.name  }}</h2>
     <p>{{ booking.room  }} on {{  booking.date|format  }}</p>
+    <p>{{ booking.email }} </p>
+    <p>{{ booking.checked_in }}</p>
 
     <button v-on:click="handleDelete(booking._id)">Delete Booking</button>
   </div>
